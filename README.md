@@ -15,12 +15,12 @@ where `username` - the username whitch you set up in UserName enviroment in dock
 
 ##Additional comments
 
-Build image (in folder with dockerfile):
+- Build image (in folder with dockerfile):
   ```bash
   docker build -t mailserver .`
   ```
 
-Run container:
+- Run container:
   ```bash
   docker run -dit -p 25:25 \ 
                   -p 143:143 \
@@ -28,9 +28,9 @@ Run container:
                   mailserver
   ```
                 
-Open shell inside container in interactive mode:
+- Open shell inside container in interactive mode:
   ```bash
   docker exec -it b8610b5cea19 /bin/bash
   ```
 
-where `b8610b5cea19` - container id (list with command `docker ps -a`)
+  where `b8610b5cea19` - container id (list with command `docker ps -a`)
