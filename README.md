@@ -17,7 +17,7 @@ where `username` - the username whitch you set up in UserName enviroment in dock
 
 - Build image (in folder with dockerfile):
   ```bash
-  docker build -t mailserver .`
+  docker build -t mailserver .
   ```
 
 - Run container:
