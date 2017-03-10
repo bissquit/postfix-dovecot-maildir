@@ -37,7 +37,7 @@ RUN postconf -e "myhostname = mail.${DomainName}" \
 # configuring Dovecot
 RUN mv /etc/dovecot/dovecot.conf{,.orig}
 ADD dovecot.conf /etc/dovecot/dovecot.conf
-RUN service postfix restart ; service dovecot restart
+RUN service postfix stop ; service dovecot stop
 
 EXPOSE 25 143 110
 
