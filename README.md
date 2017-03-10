@@ -7,7 +7,7 @@ You need to manually change enviroments `DomainName` and `UserName` in dockerfil
 
 ##Steps after container has build
 
-You need to set up a password for mail user with sh-command
+You need to set up a password for mail user with sh-command:
 
 __passwd__ `username`
 
@@ -34,3 +34,6 @@ where `username` - the username whitch you set up in UserName enviroment in dock
   ```
 
   where `b8610b5cea19` - container id (list with command `docker ps -a`)
+
+
+see more at http://blog.bissquit.com/mail-servers/unix-mail/bazovaya-nastrojka-postfix-i-dovecot/
