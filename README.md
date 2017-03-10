@@ -12,7 +12,7 @@ You need to set up a password for mail user with sh-command:
   passwd username
   ```
 
-where `username` - the username whitch you set up in UserName enviroment in dockerfile.
+where __username__ - the username whitch you set up in `UserName` enviroment in dockerfile.
 
 ##Additional comments
 
