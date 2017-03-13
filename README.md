@@ -1,5 +1,5 @@
 # Postfix and Dovecot with maildir
-The simple configuration of Postfix and Dovecot with maildir store.
+Simple configuration of Postfix and Dovecot with maildir store.
 
 ##Steps before container building
 
