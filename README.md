@@ -1,11 +1,11 @@
 # Postfix and Dovecot with maildir
 Simple configuration of Postfix and Dovecot with maildir store.
 
-##Steps before container building
+## Steps before container building
 
 You need to manually change enviroments `DomainName` and `UserName` in dockerfile.
 
-##Steps after container has build
+## Steps after container has build
 
 You need to set up a password for mail user with sh-command:
   ```bash
@@ -14,7 +14,7 @@ You need to set up a password for mail user with sh-command:
 
 where __username__ - the username whitch you set up in `UserName` enviroment in dockerfile.
 
-##Additional comments
+## Additional comments
 
 - Build image (in folder with dockerfile):
   ```bash
