@@ -1,8 +1,8 @@
 FROM debian:latest
 MAINTAINER E.Vasilyev <bq@bissquit.ru>
 
-ENV DomainName bissquit.com
-ENV UserName bissquit
+ARG DomainName
+ARG UserName
 
 # preinstallation tasks
 RUN echo mail > /etc/hostname
