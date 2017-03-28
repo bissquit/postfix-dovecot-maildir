@@ -3,19 +3,13 @@ Simple configuration of Postfix and Dovecot with maildir store.
 
 ## Steps before container building
 
-You need to manually change enviroments `DomainName` and `UserName` in dockerfile.
-
-## Steps after container has build
-
-You need to download github-repository with git command:
+You need to download master-repository with git command:
   ```bash
   git clone https://github.com/bissquit/postfix-dovecot-maildir.git
   ```
-or other branches with -b <branch_name> options
+or branches with -b <branch_name> options
 
-where __username__ - the username whitch you set up in `UserName` enviroment in dockerfile.
-
-## Additional comments
+## Use Tips
 
 - Build image (in folder with dockerfile):
   ```bash
