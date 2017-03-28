@@ -18,9 +18,12 @@ where __username__ - the username whitch you set up in `UserName` enviroment in 
 
 - Build image (in folder with dockerfile):
   ```bash
-  docker build -t mailserver .
+  docker build --build-arg DomainName=domain.com \
+               --build-arg UserName=mailuser \
+               -t mailserver .
   ```
-
+  where domain.com - your mail domain, mailuser - primary user and mailserver - image name.
+   
 - Run container:
   ```bash
   docker run -dit -p 25:25 \ 
