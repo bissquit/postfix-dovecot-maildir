@@ -18,10 +18,10 @@ or branches with -b <branch_name> option
                --build-arg UserPass=mailuser_pass \
                -t mailserver .
   ```
-  where domain.com - your mail domain, 
+  where __domain.com__ - your mail domain, 
     __mailuser__ - primary user;
-    mailuser_pass - pass of primary user;
-    mailserver - image name.
+    __mailuser_pass__ - pass of primary user;
+    __mailserver__ - image name.
    
 - Run container:
   ```bash
