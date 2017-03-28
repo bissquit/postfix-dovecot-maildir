@@ -25,10 +25,10 @@ or branches with -b <branch_name> option
    
 - Run container:
   ```bash
-  docker run -dit -p 25:25 \ 
-                  -p 143:143 \
-                  -p 110:110 \
-                  mailserver
+  docker run -d -p 25:25 \ 
+                -p 143:143 \
+                -p 110:110 \
+                mailserver
   ```
                 
 - Open shell inside container in interactive mode:
