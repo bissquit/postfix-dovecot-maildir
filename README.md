@@ -1,14 +1,42 @@
 # Postfix and Dovecot with maildir
-The simple configuration of Postfix and Dovecot with maildir store.
+Simple configuration of Postfix and Dovecot with maildir store.
 
-##Steps before container building
+## Steps before container building
 
-You need to manually change enviroments `DomainName` and `UserName` in dockerfile.
+You need to download master-repository with git command:
+  ```bash
+  git clone https://github.com/bissquit/postfix-dovecot-maildir.git
+  ```
+or branches with -b <branch_name> option
 
-##Steps after container has build
+## Use Tips
 
-You need to set up a password for mail user with sh-command
+- Build image (in folder with dockerfile):
+  ```bash
+  docker build --build-arg DomainName=domain.com \
+               --build-arg UserName=mailuser \
+               --build-arg UserPass=mailuser_pass \
+               -t mailserver .
+  ```
+  where __domain.com__ - your mail domain, 
+    __mailuser__ - primary user;
+    __mailuser_pass__ - pass of primary user;
+    __mailserver__ - image name.
+   
+- Run container:
+  ```bash
+  docker run -dit -p 25:25 \ 
+                  -p 143:143 \
+                  -p 110:110 \
+                  mailserver
+  ```
+                
+- Open shell inside container in interactive mode:
+  ```bash
+  docker exec -it b8610b5cea19 /bin/bash
+  ```
 
-__passwd__ `username`
+  where `b8610b5cea19` - container id (list with command `docker ps -a`)
 
-where `username` - the username whitch you set up in UserName enviroment in dockerfile.
+
+see more at http://blog.bissquit.com/mail-servers/unix-mail/bazovaya-nastrojka-postfix-i-dovecot/
