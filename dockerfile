@@ -3,6 +3,7 @@ MAINTAINER E.Vasilyev <bq@bissquit.ru>
 
 ARG DomainName
 ARG UserName
+ARG UserPass
 
 # preinstallation tasks
 RUN echo mail > /etc/hostname
@@ -25,7 +26,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y \
  rsyslog
 
 # create account
-RUN useradd -m -d /home/${UserName} -s /bin/false ${UserName} \
+RUN useradd -m -d /home/${UserName} -s /bin/false ${UserName} -p ${UserPass} \
  && echo "root: ${UserName}" >> /etc/aliases \
  && newaliases
 
