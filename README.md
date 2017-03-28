@@ -7,10 +7,11 @@ You need to manually change enviroments `DomainName` and `UserName` in dockerfil
 
 ## Steps after container has build
 
-You need to set up a password for mail user with sh-command:
+You need to download github-repository with git command:
   ```bash
-  passwd username
+  git clone https://github.com/bissquit/postfix-dovecot-maildir.git
   ```
+or other branches with -b <branch_name> options
 
 where __username__ - the username whitch you set up in `UserName` enviroment in dockerfile.
 
