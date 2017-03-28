@@ -26,7 +26,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y \
  rsyslog
 
 # create account
-RUN useradd -m -d /home/${UserName} -s /bin/false ${UserName} -p ${UserPass} \
+RUN useradd -m -d /home/${UserName} -s /bin/false -p ${UserPass} ${UserName} \
  && echo "root: ${UserName}" >> /etc/aliases \
  && newaliases
 
