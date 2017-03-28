@@ -27,6 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y \
 
 # create account
 RUN useradd -m -d /home/${UserName} -s /bin/false -p ${UserPass} ${UserName} \
+ && echo "${UserName}:${UserPass}" | chpasswd \
  && echo "root: ${UserName}" >> /etc/aliases \
  && newaliases
 
