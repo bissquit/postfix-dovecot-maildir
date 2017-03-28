@@ -7,7 +7,7 @@ You need to download master-repository with git command:
   ```bash
   git clone https://github.com/bissquit/postfix-dovecot-maildir.git
   ```
-or branches with -b <branch_name> options
+or branches with -b <branch_name> option
 
 ## Use Tips
 
