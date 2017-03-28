@@ -19,7 +19,7 @@ or branches with -b <branch_name> option
                -t mailserver .
   ```
   where domain.com - your mail domain, 
-    mailuser - primary user;
+    __mailuser__ - primary user;
     mailuser_pass - pass of primary user;
     mailserver - image name.
    
